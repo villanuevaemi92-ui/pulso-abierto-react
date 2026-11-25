@@ -1,0 +1,176 @@
+/* ===== ESTILOS GENERALES ===== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #eaf2f8;
+  color: #263238;
+  min-height: 100vh;
+}
+
+/* ===== CONTENEDOR PRINCIPAL ===== */
+
+.contenedor {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+/* ===== ENCABEZADO ===== */
+
+header {
+  margin-bottom: 35px;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  color: #1a5276;
+  margin-bottom: 12px;
+}
+
+header p {
+  font-size: 1rem;
+  color: #566573;
+  line-height: 1.6;
+}
+
+/* ===== BOTÓN ===== */
+
+button {
+  background-color: #2874a6;
+  color: white;
+  border: none;
+  padding: 14px 28px;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-bottom: 30px;
+}
+
+button:hover:not(:disabled) {
+  background-color: #1a5276;
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+button:focus-visible {
+  outline: 3px solid #f39c12;
+  outline-offset: 4px;
+}
+
+/* ===== LISTA DE CRIPTOMONEDAS ===== */
+
+.lista-criptomonedas {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 25px;
+}
+
+/* ===== TARJETAS ===== */
+
+.producto {
+  background-color: white;
+  padding: 30px 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.producto:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
+}
+
+.producto h2 {
+  color: #1a5276;
+  font-size: 1.4rem;
+  margin-bottom: 12px;
+}
+
+.producto p {
+  margin-bottom: 10px;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+.producto.seleccionado {
+  border: 2px solid #3498db;
+  background-color: #eaf2f8;
+}
+
+/* ===== MENSAJES DE ESTADO ===== */
+#search-error,
+#filter-error {
+  color: #b42318;
+  background-color: #fce8e6;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 14px;
+  margin: 6px 0;
+}
+[role="status"],
+[role="alert"] {
+  margin: 20px auto;
+  padding: 15px;
+  border-radius: 8px;
+  line-height: 1.5;
+}
+
+[role="status"] {
+  background-color: #d6eaf8;
+  color: #154360;
+}
+
+[role="alert"] {
+  background-color: #fadbd8;
+  color: #922b21;
+}
+
+/* ===== TABLET ===== */
+
+@media (max-width: 768px) {
+  .lista-criptomonedas {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+  }
+
+  header h1 {
+    font-size: 2rem;
+  }
+}
+
+/* ===== CELULAR ===== */
+
+@media (max-width: 480px) {
+  .contenedor {
+    width: 100%;
+    padding: 30px 16px;
+  }
+
+  .lista-criptomonedas {
+    grid-template-columns: 1fr;
+  }
+
+  header h1 {
+    font-size: 1.8rem;
+  }
+
+  .producto {
+    padding: 25px 18px;
+  }
+
+  button {
+    width: 100%;
+  }
+}
