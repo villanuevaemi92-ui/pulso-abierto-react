@@ -71,3 +71,18 @@ La aplicación consulta los precios de Bitcoin, Ethereum y Solana en dólares es
 El proyecto incluye el código fuente, estilos, recursos, archivos de configuración y dependencias declaradas en `package.json` y `package-lock.json`.
 
 La carpeta `node_modules` no se incluye en el archivo ZIP. Para instalar las dependencias, ejecutar `npm install`.
+
+
+## Mejora de mantenibilidad – Módulo 4
+
+**Problema identificado:**
+El tipo `Crypto` estaba definido nuevamente dentro de `CryptoList.tsx`, aunque ya existía una definición compartida en `src/types/crypto.ts`.
+
+**Modificación realizada:**
+Se eliminó la interfaz duplicada de `CryptoList.tsx` y se reutilizó el tipo centralizado mediante la importación `import type { Crypto } from "./types/crypto"`.
+
+**Beneficio:**
+Se evita mantener definiciones duplicadas y se facilita la actualización y consistencia de los tipos de datos de la aplicación.
+
+**Verificación:**
+Se comprobará que el proyecto compile correctamente y que las pruebas automatizadas continúen funcionando, sin alterar el comportamiento de la aplicación.

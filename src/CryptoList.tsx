@@ -4,13 +4,7 @@ import { z } from "zod";
 import CryptoCard from "./CryptoCard";
 import { useFavoritesStore } from "./store/favoritesStore";
 import { Link } from "react-router-dom";
-
-interface Crypto {
-  id: string;
-  name: string;
-  symbol: string;
-  price: number;
-}
+import type { Crypto } from "./types/crypto";
 
 interface CryptoListProps {
   cryptos: Crypto[];
