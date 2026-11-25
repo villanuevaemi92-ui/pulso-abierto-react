@@ -137,3 +137,18 @@ Se evita mantener definiciones duplicadas y se facilita la actualización y cons
 **Verificación:**
 
 Se comprobó que el proyecto compile correctamente mediante `npm run build` y que las pruebas automatizadas finalicen correctamente mediante `npm run test:run`, sin alterar el comportamiento de la aplicación.
+
+## Verificación final
+
+Se realizaron las siguientes comprobaciones del proyecto:
+
+- **Pruebas ejecutadas:** `npm run test`. Resultado: 3 archivos de pruebas aprobados y 6 pruebas exitosas.
+- **Build generado correctamente:** `npm run build`, sin errores.
+- **Preview comprobado:** `npm run preview`. Se verificó el funcionamiento de la versión compilada.
+- **Despliegue realizado:** aplicación publicada correctamente en Vercel. Se comprobó la carga, la API, la navegación, los favoritos, el formulario y el diseño adaptable.
+- **Fecha de verificación:** 25/11/2026.
+
+**Enlaces de entrega:**
+
+- **GitHub:** https://github.com/villanuevaemi92-ui/pulso-abierto-react
+- **Vercel:** https://pulso-abierto-react-seven.vercel.app/
